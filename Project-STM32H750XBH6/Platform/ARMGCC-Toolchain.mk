@@ -15,5 +15,9 @@ endif
 HEX_COMMAND = $(CP) -O ihex
 BIN_COMMAND = $(CP) -O binary -S
 
+
 # 链接脚本
 LDSCRIPT = Platform/ARMGCC_STM32H750XBHx_FLASH.ld
+# 启动文件
+ASM_STARTUP = Platform/ARMGCC_startup_stm32h750xx.s
+
