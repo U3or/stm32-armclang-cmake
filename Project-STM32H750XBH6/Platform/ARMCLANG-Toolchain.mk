@@ -1,41 +1,41 @@
-
 # ############################
 # 编译器设置
 # ############################
-
 ARMCLANG_PATH := C:/Keil_v5/ARM/ARMCLANG/bin
 
 CC  = $(ARMCLANG_PATH)/armclang
 CXX = $(ARMCLANG_PATH)/armclang
 AS  = $(ARMCLANG_PATH)/armclang
 
-CP  = $(ARMCLANG_PATH)/fromelf
-SZ  = $(ARMCLANG_PATH)/fromelf
+LD  = $(ARMCLANG_PATH)/armlink
+
+# 链接脚本地址
+TOOLCHAIN_LDSCRIPT = Platform/ARMCLANG-STM32H750XBHx.sct
+# 启动文件地址
+TOOLCHAIN_ASM_STARTUP = Platform/ARMCLANG-startup_stm32h750xx.s
 
 # ############################
-# 编译选项
+# 编译参数 
 # ############################
 
-COMMON_FLAGS = --target=arm-arm-none-eabi -mcpu=${CPU}
+MCU += --target=arm-arm-none-eabi
 
-FPU_COMPILE_FLAGS = -mfpu=fpv5-d16 -mfloat-abi=hard
-FPU_LINKER_FLAGS  = --cpu ${CPU}.fp.dp")
+TOOLCHAIN_CC_FLAGS =  \
+	-w -gdwarf-4 -MD -fno-rtti -funsigned-char \
+	-fshort-enums -fshort-wchar -ffunction-sections
+	
+TOOLCHAIN_CX_FLAGS = 
 
-# C_FLAGS := 
-# 
-# CXX_FLAGS := 
-# 
-# ASM_FLAGS := 
-# 
-# LD_FLAGS :=
+TOOLCHAIN_AS_FLAGS = -masm=auto -gdwarf-4
 
-# 生成二进制文件命令
-HEX_COMMAND = $(CP) -O ihex
-BIN_COMMAND = $(CP) -O binary -S
-
-# 链接脚本
-LDSCRIPT = Platform/ARMCLANG_STM32H750XBHx.sct
-
-# 启动文件
-ASM_STARTUP = Platform/ARMCLANG_startup_stm32h750xx.s
+# ############################
+# 链接参数 
+# ${CPU}来自主Makefile
+# ############################
+TOOLCHAIN_LD_FLAGS = \
+	--cpu ${CPU}.fp.dp \
+	--strict --scatter $(TOOLCHAIN_LDSCRIPT) \
+	--summary_stderr --info summarysizes \
+	--load_addr_map_info --xref --callgraph --symbols --map \
+	--info sizes --info totals --info unused --info veneers
 
