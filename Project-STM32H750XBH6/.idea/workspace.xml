@@ -16,13 +16,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15d3eb8e-6eb3-4336-928c-5efb824f49f0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Platform/ARMGCC-Toolchain.mk" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/ARMGCC-Toolchain.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserApp/_io.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserApp/user_main.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/user_main.c" afterDir="false" />
-    </list>
+    <list default="true" id="15d3eb8e-6eb3-4336-928c-5efb824f49f0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,11 +87,6 @@
   }
 }</component>
   <component name="RunManager" selected="Makefile Application.all">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="all" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="-j32" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project-STM32H750XBH6" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="mingw32-make">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
@@ -124,6 +113,7 @@
       <workItem from="1703510662354" duration="357000" />
       <workItem from="1703511642964" duration="8000" />
       <workItem from="1703512923040" duration="172000" />
+      <workItem from="1703513899402" duration="6000" />
     </task>
     <servers />
   </component>
