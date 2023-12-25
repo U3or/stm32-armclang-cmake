@@ -17,20 +17,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15d3eb8e-6eb3-4336-928c-5efb824f49f0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project-STM32F103RCT6/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project-STM32F103RCT6/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project-STM32F103RCT6/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project-STM32F103RCT6/.idea/stm32-project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/stm32-project-h750.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDK-ARM/log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Platform/ARMGCC-Toolchain.mk" beforeDir="false" afterPath="$PROJECT_DIR$/Platform/ARMGCC-Toolchain.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserApp/_io.c" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UserApp/user_main.c" beforeDir="false" afterPath="$PROJECT_DIR$/UserApp/user_main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/.gitkeep" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,27 +71,27 @@
     <option name="majorVersion" value="2023" />
     <option name="minorVersion" value="2.1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2a2JIdR6msQezBWYSo2qI5Njihp" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Makefile Application.all">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
@@ -131,6 +122,8 @@
       <option name="presentableId" value="Default" />
       <updated>1703510661285</updated>
       <workItem from="1703510662354" duration="357000" />
+      <workItem from="1703511642964" duration="8000" />
+      <workItem from="1703512923040" duration="172000" />
     </task>
     <servers />
   </component>

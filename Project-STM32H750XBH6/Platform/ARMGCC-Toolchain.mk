@@ -38,14 +38,16 @@ TOOLCHAIN_AS_FLAGS = -Wall -fdata-sections -ffunction-sections
 # ${CPU}来自主Makefile
 # ############################
 # 链接库
-LIBS = -lc -lm -lnosys 
+TOOLCHAIN_LIBS = -lc -lm -lnosys 
 
-LIBDIR = 
+TOOLCHAIN_LIBDIR = 
 
 TOOLCHAIN_LD_FLAGS = \
-	${MCU} -specs=nano.specs -T$(TOOLCHAIN_LDSCRIPT) $(LIBDIR) $(LIBS) \
-	-Wl,-Map=${BUILD_DIR}/${TARGET}.map,--cref -Wl,--gc-sections
-
+	${MCU} -specs=nano.specs -T$(TOOLCHAIN_LDSCRIPT) \
+	$(TOOLCHAIN_LIBDIR) $(TOOLCHAIN_LIBS) \
+	-Wl,-Map=${BUILD_DIR}/${TARGET}.map,--cref \
+	-Wl,--gc-sections \
+	-Wl,--no-warn-rwx-segments
 
 # ############################
 # 命令

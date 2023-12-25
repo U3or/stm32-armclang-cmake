@@ -35,12 +35,17 @@ INCLUDE_DIRS =  \
 	-IDrivers/STM32H7xx_HAL_Driver/Inc/Legacy \
 	-IDrivers/CMSIS/Device/ST/STM32H7xx/Include \
 	-IDrivers/CMSIS/Include \
-	-IUserApp
+	-IUserApp \
+	-IUserApp/libs/CMSIS/DSP/Include
+	
 
 SOURCES =  \
 	$(wildcard Core/Src/*.c) \
 	$(wildcard Drivers/STM32H7xx_HAL_Driver/Src/*.c) \
 	$(wildcard UserApp/*.c)
+
+LIBS = \
+	UserApp/libs/CMSIS/DSP/Lib/GCC/libarm_cortexM7lfdp_math.a
 
 
 ASM_SOURCES = ${TOOLCHAIN_ASM_STARTUP}
@@ -57,7 +62,7 @@ CFLAGS  = $(MCU) $(DEFINITIONS) $(INCLUDE_DIRS) $(OPT) ${TOOLCHAIN_CC_FLAGS}
 # ################################################
 #                    链接参数
 # ################################################
-LDFLAGS = ${TOOLCHAIN_LD_FLAGS}
+LDFLAGS = ${TOOLCHAIN_LD_FLAGS} $(LIBS)
 
 
 # ################################################
