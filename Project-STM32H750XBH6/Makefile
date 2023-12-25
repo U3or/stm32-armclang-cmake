@@ -14,7 +14,7 @@ DEFINITIONS = -DUSE_HAL_DRIVER -DSTM32H750xx
 # debug build?
 DEBUG = 1
 # optimization
-OPT = -Ofast
+OPT = -O0
 # fpu
 FPU = -mfpu=fpv5-d16
 # float-abi
@@ -34,11 +34,13 @@ INCLUDE_DIRS =  \
 	-IDrivers/STM32H7xx_HAL_Driver/Inc \
 	-IDrivers/STM32H7xx_HAL_Driver/Inc/Legacy \
 	-IDrivers/CMSIS/Device/ST/STM32H7xx/Include \
-	-IDrivers/CMSIS/Include
+	-IDrivers/CMSIS/Include \
+	-IUserApp
 
 SOURCES =  \
 	$(wildcard Core/Src/*.c) \
-	$(wildcard Drivers/STM32H7xx_HAL_Driver/Src/*.c)
+	$(wildcard Drivers/STM32H7xx_HAL_Driver/Src/*.c) \
+	$(wildcard UserApp/*.c)
 
 
 ASM_SOURCES = ${TOOLCHAIN_ASM_STARTUP}
