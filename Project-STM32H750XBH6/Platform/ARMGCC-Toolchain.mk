@@ -24,7 +24,7 @@ TOOLCHAIN_ASM_STARTUP = Platform/ARMGCC-startup_stm32h750xx.s
 
 MCU += -mthumb
 
-TOOLCHAIN_CC_FLAGS += \
+TOOLCHAIN_CC_FLAGS = \
 	-Wall -fdata-sections -ffunction-sections \
 	-g -gdwarf-2 -MMD -MP -MF"$(@:%.o=%.d)"	\
 	-Wa,-a,-ad,-alms=${BUILD_DIR}/$(notdir $(<:.c=.lst))
