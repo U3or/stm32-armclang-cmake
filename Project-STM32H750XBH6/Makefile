@@ -45,7 +45,8 @@ SOURCES =  \
 	$(wildcard UserApp/*.c)
 
 LIBS = \
-	UserApp/libs/CMSIS/DSP/Lib/GCC/libarm_cortexM7lfdp_math.a
+	-LUserApp/libs/CMSIS/DSP/Lib/GCC/ \
+	-larm_cortexM7lfdp_math
 
 
 ASM_SOURCES = ${TOOLCHAIN_ASM_STARTUP}
@@ -76,13 +77,16 @@ OBJECTS +=  $(addprefix $(BUILD_DIR)/,$(notdir $(ASM_SOURCES:.s=.o)))
 
 
 $(BUILD_DIR)/%.o: %.c   Makefile | $(BUILD_DIR) 
-	$(CC) -c $(CFLAGS)  $< -o $@
+	@echo CC $<
+	@$(CC) -c $(CFLAGS)  $< -o $@
 
 $(BUILD_DIR)/%.o: %.s   Makefile | $(BUILD_DIR)
-	$(AS) -c $(ASFLAGS) $< -o $@
+	@echo AS $<
+	@$(AS) -c $(ASFLAGS) $< -o $@
 
 $(BUILD_DIR)/$(TARGET).elf: $(OBJECTS) Makefile
-	$(LD) $(OBJECTS) $(LDFLAGS) -o $@
+	@echo LD $@
+	@$(LD) $(OBJECTS) $(LDFLAGS) -o $@
 
 $(BUILD_DIR):
 	mkdir $@	
