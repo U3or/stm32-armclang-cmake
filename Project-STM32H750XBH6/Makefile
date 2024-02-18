@@ -44,10 +44,7 @@ SOURCES =  \
 	$(wildcard Drivers/STM32H7xx_HAL_Driver/Src/*.c) \
 	$(wildcard UserApp/*.c)
 
-LIBS = \
-	-LUserApp/libs/CMSIS/DSP/Lib/GCC/ \
-	-larm_cortexM7lfdp_math
-
+LIBS = 
 
 ASM_SOURCES = ${TOOLCHAIN_ASM_STARTUP}
 

@@ -38,9 +38,11 @@ TOOLCHAIN_AS_FLAGS = -Wall -fdata-sections -ffunction-sections
 # ${CPU}来自主Makefile
 # ############################
 # 链接库
-TOOLCHAIN_LIBS = -lc -lm -lnosys 
+TOOLCHAIN_LIBDIR = \
+	-LUserApp/libs/CMSIS/DSP/Lib/GCC/
 
-TOOLCHAIN_LIBDIR = 
+TOOLCHAIN_LIBS = -lc -lm -lnosys -larm_cortexM7lfdp_math
+
 
 TOOLCHAIN_LD_FLAGS = \
 	${MCU} -specs=nano.specs -T$(TOOLCHAIN_LDSCRIPT) \
