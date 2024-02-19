@@ -1,0 +1,9 @@
+MDK-ARM/DebugConfig/
+MDK-ARM/stm32-project.uvguix.Q
+MDK-ARM/stm32-project/
+
+.idea
+.si
+.vscode
+build
+
