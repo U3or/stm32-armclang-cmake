@@ -44,7 +44,7 @@ void vTask1(void *argument)
 
     while(1){
         HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_8);
-        HAL_Delay(200);
+        vTaskDelay(300);
     }
 }
 
@@ -53,7 +53,7 @@ void vTask2(void *argument)
     
     while(1){
         HAL_UART_Transmit(&huart1, (uint8_t*)txt, strlen(txt), 100);
-        HAL_Delay(300);
+        vTaskDelay(1000);
     }
 }
 
