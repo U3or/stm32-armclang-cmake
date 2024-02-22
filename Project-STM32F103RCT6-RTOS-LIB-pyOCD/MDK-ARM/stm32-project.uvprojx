@@ -314,7 +314,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>1</Optim>
+            <Optim>4</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -338,9 +338,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_HAL_DRIVER,STM32F103xE</Define>
+              <Define>USE_HAL_DRIVER,STM32F103xE,ARM_MATH_CM3</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\UserApp;..\UserApp\Lib\FreeRTOS\include;..\UserApp\Lib\FreeRTOS\portable\RVDS\ARM_CM3</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\UserApp;..\UserApp\Lib\FreeRTOS\include;..\UserApp\Lib\FreeRTOS\portable\RVDS\ARM_CM3;..\UserApp\Lib\CMSIS\DSP\include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -568,6 +568,16 @@
               <FileName>port.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\UserApp\Lib\FreeRTOS\portable\RVDS\ARM_CM3\port.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>CMSIS/DSP/LIB</GroupName>
+          <Files>
+            <File>
+              <FileName>..\..\Users\Q\Desktop\test\Project-STM32F103RCT6-pyOCD\UserApp\Lib\CMSIS\DSP\lib\ARM\arm_cortexM3l_math.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>$TC_ROOT$\..\..\Users\Q\Desktop\test\Project-STM32F103RCT6-pyOCD\UserApp\Lib\CMSIS\DSP\lib\ARM\arm_cortexM3l_math.lib</FilePath>
             </File>
           </Files>
         </Group>

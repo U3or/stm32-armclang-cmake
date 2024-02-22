@@ -6,7 +6,7 @@
 #include <stdbool.h>
 #include "FreeRTOS.h"
 #include "task.h"
-//#include "arm_math.h"
+#include "arm_math.h"
 
 
 
@@ -17,22 +17,24 @@ const char *txt = "it works!\n";
 
 void user_main(void)
 {
+	
+//	ARM_MATH lib test code
+    float32_t src1[3] = {1.0f, 3.3f, 9.4f};
+    float32_t src2[3] = {1.3f, 3.2f, 9.1f};
+    float32_t dst[3] = {0};
 
+    arm_add_f32(src1, src2, dst, 3);
+	
+//	FreeRTOS test code
     xTaskCreate(vTask1, "vTask1", 128, NULL, 1, NULL);
     xTaskCreate(vTask2, "vTask2", 128, NULL, 1, NULL);
 
     vTaskStartScheduler();
-
-    // float32_t src1[3] = {1.0f, 3.3f, 9.4f};
-    // float32_t src2[3] = {1.3f, 3.2f, 9.1f};
-    // float32_t dst[3] = {0};
-
-    // arm_add_f32(src1, src2, dst, 3);
-
     
+	
     while (true){
         HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_8);
-        HAL_Delay(200);
+        HAL_Delay(1000);
     }
 
 }
