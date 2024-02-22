@@ -572,7 +572,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>CMSIS/DSP/LIB</GroupName>
+          <GroupName>CMSIS/DSP</GroupName>
           <Files>
             <File>
               <FileName>..\..\Users\Q\Desktop\test\Project-STM32F103RCT6-pyOCD\UserApp\Lib\CMSIS\DSP\lib\ARM\arm_cortexM3l_math.lib</FileName>

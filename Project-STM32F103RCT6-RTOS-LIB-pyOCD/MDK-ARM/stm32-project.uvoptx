@@ -657,7 +657,7 @@
   </Group>
 
   <Group>
-    <GroupName>CMSIS/DSP/LIB</GroupName>
+    <GroupName>CMSIS/DSP</GroupName>
     <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
