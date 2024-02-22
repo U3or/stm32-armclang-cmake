@@ -15,7 +15,7 @@ PYOCD_CONFIG_FILE = Platform/pyOcd-config.yaml
 
 DOWNLOAD_FLAGS = $(FIRMWARE) --target STM32F103RC
 
-DEBUG_FLAGS = $(FIRMWARE) --port 65533 --target STM32F103RC -f 10M
+DEBUG_FLAGS = --elf $(FIRMWARE) --port 65533 --target STM32F103RC -f 10M -O rtos.enable=False
 
 #######################################
 # 命令
@@ -23,10 +23,10 @@ DEBUG_FLAGS = $(FIRMWARE) --port 65533 --target STM32F103RC -f 10M
 load:
 	$(PYOCD) flash $(DOWNLOAD_FLAGS)
 
-debuger:
+server:
 	$(PYOCD) gdbserver $(DEBUG_FLAGS) 
 # --config $(PYOCD_CONFIG_FILE)
 
-gdb:
+debug:
 	arm-none-eabi-gdb $(FIRMWARE) 
 # target remote localhost:65533
