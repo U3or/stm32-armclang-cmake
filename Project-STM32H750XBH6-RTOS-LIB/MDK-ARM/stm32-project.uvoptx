@@ -693,8 +693,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\UserApp\libs\CMSIS\DSP\Lib\ARM\arm_cortexM7lfsp_math.lib</PathWithFileName>
-      <FilenameWithoutPath>arm_cortexM7lfsp_math.lib</FilenameWithoutPath>
+      <PathWithFileName>..\UserApp\libs\CMSIS\DSP\Lib\ARM\arm_cortexM7lfdp_math.lib</PathWithFileName>
+      <FilenameWithoutPath>arm_cortexM7lfdp_math.lib</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

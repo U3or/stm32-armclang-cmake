@@ -605,9 +605,9 @@
           <GroupName>CMSIS/DSP</GroupName>
           <Files>
             <File>
-              <FileName>arm_cortexM7lfsp_math.lib</FileName>
+              <FileName>arm_cortexM7lfdp_math.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>..\UserApp\libs\CMSIS\DSP\Lib\ARM\arm_cortexM7lfsp_math.lib</FilePath>
+              <FilePath>..\UserApp\libs\CMSIS\DSP\Lib\ARM\arm_cortexM7lfdp_math.lib</FilePath>
             </File>
           </Files>
         </Group>
