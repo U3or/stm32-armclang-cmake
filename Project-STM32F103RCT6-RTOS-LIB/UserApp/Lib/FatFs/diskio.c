@@ -16,6 +16,22 @@
 #define DEV_USB		2	/* Example: Map USB MSD to physical drive 2 */
 
 
+
+extern int RAM_disk_status();
+extern int MMC_disk_status();
+extern int USB_disk_status();
+
+extern int RAM_disk_initialize();
+extern int MMC_disk_initialize();
+extern int USB_disk_initialize();
+
+extern int RAM_disk_read();
+extern int MMC_disk_read();
+extern int USB_disk_read();
+
+extern int RAM_disk_write();
+extern int MMC_disk_write();
+extern int USB_disk_write();
 /*-----------------------------------------------------------------------*/
 /* Get Drive Status                                                      */
 /*-----------------------------------------------------------------------*/

@@ -15,7 +15,7 @@ void vTask2(void *argument);
 
 const char *txt = "it works!\n";
 
-void user_main(void)
+__NO_RETURN void user_main(void)
 {
 	
 //	ARM_MATH lib test code
@@ -39,20 +39,20 @@ void user_main(void)
 
 }
 
-void vTask1(void *argument)
+__NO_RETURN void vTask1(void *argument)
 {
-
+	(void)argument;
     while(1){
         HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_8);
         vTaskDelay(300);
     }
 }
 
-void vTask2(void *argument)
+__NO_RETURN void vTask2(void *argument)
 {
-    
+    (void)argument;
     while(1){
-        HAL_UART_Transmit(&huart1, (uint8_t*)txt, strlen(txt), 100);
+        HAL_UART_Transmit(&huart1, (uint8_t *)txt, (uint16_t)strlen(txt), 100);
         vTaskDelay(1000);
     }
 }

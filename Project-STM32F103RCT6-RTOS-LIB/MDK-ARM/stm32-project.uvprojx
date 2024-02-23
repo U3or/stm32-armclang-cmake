@@ -517,6 +517,16 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>UserApp</GroupName>
+          <Files>
+            <File>
+              <FileName>user_main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UserApp\user_main.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>FreeRTOS/source</GroupName>
           <Files>
             <File>
@@ -578,16 +588,6 @@
               <FileName>..\..\Users\Q\Desktop\test\Project-STM32F103RCT6-pyOCD\UserApp\Lib\CMSIS\DSP\lib\ARM\arm_cortexM3l_math.lib</FileName>
               <FileType>4</FileType>
               <FilePath>$TC_ROOT$\..\..\Users\Q\Desktop\test\Project-STM32F103RCT6-pyOCD\UserApp\Lib\CMSIS\DSP\lib\ARM\arm_cortexM3l_math.lib</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>UserApp</GroupName>
-          <Files>
-            <File>
-              <FileName>user_main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\UserApp\user_main.c</FilePath>
             </File>
           </Files>
         </Group>
