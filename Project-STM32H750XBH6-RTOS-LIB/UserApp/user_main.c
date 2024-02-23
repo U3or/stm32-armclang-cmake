@@ -17,9 +17,11 @@ void vTask1(void *argument);
 
 const char *txt = "it works!\n";
 
+volatile static char ram_test_array[0x7FFFE] = {0};
+
 void user_main()
 {
-	
+	ram_test_array[3000] = 'a';
 	
 //	ARM_MATH lib test code
     const float32_t src[3] = {-3.0f, 1.0f, 2.0f};
