@@ -35,7 +35,8 @@
     extern "C" {
 #endif
 /* *INDENT-ON* */
-
+#include <stdint.h>
+#include "FreeRTOS.h"
 /*-----------------------------------------------------------
  * Port specific definitions.
  *

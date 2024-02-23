@@ -31,6 +31,7 @@
 *----------------------------------------------------------*/
 
 /* Scheduler includes. */
+#include <stdint.h>
 #include "FreeRTOS.h"
 #include "task.h"
 
