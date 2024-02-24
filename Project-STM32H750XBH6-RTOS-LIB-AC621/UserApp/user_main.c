@@ -2,6 +2,8 @@
 #include "main.h"
 // cmsis dsp
 #include "arm_math.h"
+// CMSIS NN
+#include "arm_nnfunctions.h"
 // freertos
 #include "FreeRTOS.h"
 #include "task.h"
@@ -19,6 +21,9 @@ const char *txt = "it works!\n";
 
 volatile static char ram_test_array[0x7FFFE] = {0};
 
+q7_t output_data[10] = {0};
+
+
 void user_main()
 {
 	ram_test_array[3000] = 'a';
@@ -27,6 +32,9 @@ void user_main()
     const float32_t src[3] = {-3.0f, 1.0f, 2.0f};
     float32_t dst[3] = {0.0f, 0.0f, 0.0f};
     arm_abs_f32(src, dst , 3);
+
+//	arm cmsis nn lib test
+	arm_softmax_q7(output_data, 10, output_data);
 	
 //	FreeRTOS test code
     xTaskCreate(vTask1, "vTask1", 128, NULL, 1, NULL);
