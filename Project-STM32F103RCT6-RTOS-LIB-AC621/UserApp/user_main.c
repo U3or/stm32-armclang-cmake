@@ -12,10 +12,11 @@
 
 void vTask1(void *argument);
 void vTask2(void *argument);
+void vTask3(void *argument);
 
 const char *txt = "it works!\n";
 
-__NO_RETURN void user_main(void)
+void user_main(void)
 {
 	
 //	ARM_MATH lib test code
@@ -27,16 +28,12 @@ __NO_RETURN void user_main(void)
 	
 //	FreeRTOS test code
     xTaskCreate(vTask1, "vTask1", 128, NULL, 1, NULL);
-    xTaskCreate(vTask2, "vTask2", 128, NULL, 1, NULL);
+	// xTaskCreate(vTask2, "vTask2", 128, NULL, 1, NULL);
+    xTaskCreate(vTask3, "vTask3", 128, NULL, 1, NULL);
 
     vTaskStartScheduler();
     
-	
-    while (true){
-        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_8);
-        HAL_Delay(1000);
-    }
-
+	Error_Handler();
 }
 
 __NO_RETURN void vTask1(void *argument)
@@ -44,11 +41,21 @@ __NO_RETURN void vTask1(void *argument)
 	(void)argument;
     while(1){
         HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_8);
-        vTaskDelay(300);
+        vTaskDelay(500);
     }
 }
 
 __NO_RETURN void vTask2(void *argument)
+{
+	(void)argument;
+    while(1){
+        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_8);
+        vTaskDelay(500);
+    }
+}
+
+
+__NO_RETURN void vTask3(void *argument)
 {
     (void)argument;
     while(1){
